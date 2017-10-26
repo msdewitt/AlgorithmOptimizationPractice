@@ -117,19 +117,52 @@ namespace ConsoleApplication1
 
             //Console Output
             //Brute Force Algorithm: O(N ^ 2) runtime
-           // ------------------------------------ -
-             //35 40 55
-           // Loops: 49
-          //  Improved Algorithm via Binary Search: O(N(log(n))) runtime
-          //  ----------------------------------------------------------
-          //  35 40 55
-          //  Improved Algorithm via HashTable: O(N) runtime and O(N) space
-          //  ------------------------------------------------------------ -
-          //  35 40 55
-         //   Improved Algorithm via HashTable: O(N) runtime and O(1) space
-          //  ------------------------------------------------------------ -
-          //  35 40 55
-          //  Loops: 29
+            // ------------------------------------ -
+            //35 40 55
+            // Loops: 49
+            //  Improved Algorithm via Binary Search: O(N(log(n))) runtime
+            //  ----------------------------------------------------------
+            //  35 40 55
+            //  Improved Algorithm via HashTable: O(N) runtime and O(N) space
+            //  ------------------------------------------------------------ -
+            //  35 40 55
+            //   Improved Algorithm via HashTable: O(N) runtime and O(1) space
+            //  ------------------------------------------------------------ -
+            //  35 40 55
+            //  Loops: 29
+
+       //     Is Unique: Implement an algorithm to determine if a string has all unique characters.What if you
+        //   cannot use additional data structures ?
+            string test1 = "reww";
+            string test2 = "abcdefg";
+            Console.WriteLine("Is Unique: Implement an algorithm to determine if a string has all unique characters.What if you cannot use additional data structures ? \n");
+            Console.WriteLine("String: " + test1 + ", Contains Unique Characters: " + containsUnique(test1) + "\n");
+            Console.WriteLine("String: " + test2 + ", Contains Unique Characters: " + containsUnique(test2) + "\n");
+
+
+
+            //Given two strings, write a method to decide if one is a permutation of the
+            //other.
+
+
+
         }
+        private static bool containsUnique(string test) 
+        {
+            bool doesContain = true;
+            ArrayList arrayL = new ArrayList();
+            for (int i = 0; i < test.Length; i++)
+            {   
+                if (arrayL.Contains(test[i]))
+                {
+                    doesContain = false;
+                }
+                
+                Console.WriteLine(arrayL.Contains(test[i]));
+                arrayL.Add(test[i]);
+            }
+            return doesContain;
+        }
+
     }
 }
