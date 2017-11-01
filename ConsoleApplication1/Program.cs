@@ -143,8 +143,16 @@ namespace ConsoleApplication1
 
             //Given two strings, write a method to decide if one is a permutation of the
             //other.
+            string stringOne = "bbatabt";
+            string stringTwo = "bat";
+            Console.WriteLine("Given two strings, write a method to decide if one is a permutation of the other. \n");
+            Console.WriteLine("StringOne: " + stringOne + " " + "StringTwo: " + stringTwo + ", Has Permutations: " + isPermutation(stringOne, stringTwo) + "\n");
 
-
+            string urlString = "Mr John Smith     ";
+            int length = 13;
+            Console.WriteLine("Write a method to replace all spaces in a string with '%20:\n");
+            Console.WriteLine("String: " + "'"+ urlString + "'" + ", Length: " + length + " = " + URLify(urlString, length) + " " + "\n");
+           
 
         }
         private static bool containsUnique(string test) 
@@ -164,5 +172,88 @@ namespace ConsoleApplication1
             return doesContain;
         }
 
+
+
+
+        private static bool isPermutation(string one, string two)
+        {
+            var hasPerm = false;
+            string[] permuations = findPermutations(two);
+            for (int i = 0; i < permuations.Length; i++)
+            {
+                Console.WriteLine(permuations[i]);
+            }
+                
+            for (int i =0; i< one.Length; i++)
+            {
+                int counter = 0;
+                for (int j = 0; j < permuations.Length; j++)
+                {
+                    for (int k = 0; k < permuations[j].Length; k++)
+                    {
+
+                        string perm = permuations[j];
+                        
+                        if (perm[k] == one[i])
+                        {
+                            counter++;
+                            
+                            Console.WriteLine("Reset Success");
+                        }
+                        if (counter == perm.Length)
+                        {
+                            hasPerm = true;
+                        }
+                        if(perm[k] != one[i])
+                        {
+                            
+                            Console.WriteLine("Reset");
+                        }
+                        k = perm.Length;
+
+                    }
+                }
+            }
+            return hasPerm;
+        }
+        private static string[] findPermutations(string message)
+        {
+            string variableMessage = message;
+            string[] permutations = new string[message.Length];
+            for (int i=0; i< variableMessage.Length; i++)
+            {
+                variableMessage = variableMessage.Substring(1, variableMessage.Length - 1) + variableMessage.Substring(0, 1);
+                permutations[i] = variableMessage;
+            }
+            return permutations;
+        }
+
+
+        private static string URLify(string input, int length)
+        {
+            Hashtable ht = new Hashtable();
+            string output = "";
+
+            for (int i = 0; i < length; i++)
+            {
+                ht.Add(i, input[i]);
+
+                Console.WriteLine(i);
+            }
+
+            for (int i = 0; i < ht.Count; i++) //O(n) space, O(n) time
+            {
+                if(ht[i].ToString() == " ")
+                {
+                    ht[i] = "%20";
+                }
+                Console.WriteLine(ht[i]);
+                output += ht[i].ToString();
+            }
+            
+
+                Console.WriteLine(output);
+            return output;
+        }
     }
 }
