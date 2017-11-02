@@ -47,6 +47,14 @@ namespace ConsoleApplication1
             Console.WriteLine("-----------------------------------------------------------\n");
 
 
+            // Given a string, write a function to check if it is a permutation of a palindrome
+            string trueTest = "tact coa";
+            string falseTest = "aabb t s   ";
+            Console.WriteLine("Given a string, write a function to check if it is a permutation of a palindrome:\n");
+            Console.WriteLine( "String: " + "'" + trueTest + "'"+ ": " + PalindromePermutation.isPalindrome(trueTest));
+            Console.WriteLine("String: " + "'" + falseTest + "'" + ": " + PalindromePermutation.isPalindrome(falseTest));
+            Console.WriteLine("-----------------------------------------------------------\n");
+
         }
 
     }
