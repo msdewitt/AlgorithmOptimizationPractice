@@ -15,7 +15,7 @@ namespace ConsoleApplication1
         public static bool isOneEditAway(string mainString, string editedString)
         {
             int numOfEdits = 0;
-            if(mainString.Length - editedString.Length == -1)
+            if(Math.Abs(mainString.Length - editedString.Length) == 1)
             {
                 numOfEdits++;
             }
@@ -25,7 +25,7 @@ namespace ConsoleApplication1
                 bool key = true;
                 if(!editedString.Contains(mainString[i]) && mainString.Length - editedString.Length == 1)
                 {
-                    numOfEdits++;
+                    
                     key = false;
                 }
                 if (!editedString.Contains(mainString[i]) && key == true)
