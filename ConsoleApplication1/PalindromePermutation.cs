@@ -51,7 +51,7 @@ namespace ConsoleApplication1
             }
             return isPalindrome;
             //Console Output
-            //Brute Force Algorithm: O(1) runtime, O(1) space (If you don't consider creating the hashtable part of the algorithm.)
+            //Algorithm: O(1) runtime, O(1) space (If you don't consider creating the hashtable part of the algorithm.)
             // ------------------------------------ -
             //Given a string, write a function to check if it is a permutation of a palindrome:
 

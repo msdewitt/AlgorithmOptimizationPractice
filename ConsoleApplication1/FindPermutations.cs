@@ -49,7 +49,7 @@ namespace ConsoleApplication1
             return hasPerm;
 
             //Console Output
-            //Brute Force Algorithm: O(N^3) runtime, O(N) space
+            //Algorithm: O(N^3) runtime, O(N) space
             // ------------------------------------ -
             //Given two strings, write a method to decide if one is a permutation of the other.
 

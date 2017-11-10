@@ -25,7 +25,7 @@ namespace ConsoleApplication1
             return doesContain;
 
             //Console Output
-            //Brute Force Algorithm: O(N) runtime, O(N) space
+            //Algorithm: O(N) runtime, O(N) space
             // ------------------------------------ -
             //  Is Unique: Implement an algorithm to determine if a string has all unique characters.What if you cannot use additional data structures?
 

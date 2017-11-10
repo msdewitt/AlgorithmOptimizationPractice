@@ -12,8 +12,21 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            string main = "bake";
+            string edit = "cake";
+            string main2 = "ake";
+            string edit2 = "cake";
+            string main3 = "bcake";
+            string edit3 = "cake";
+            string main4 = "bbake";
+            string edit4 = "cake";
+            Console.WriteLine("One Away: There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. \n");
+            Console.WriteLine("Parent String: " + "'" + main + "'" + ", " + "String to test: " + "'" + edit + "'" + "\n" + "IsOneEditAway: " + OneAway.isOneEditAway(main, edit) + "\n");
+            Console.WriteLine("Parent String: " + "'" + main2 + "'" + ", " + "String to test: " + "'" + edit2 + "'" + "\n" + "IsOneEditAway: " + OneAway.isOneEditAway(main2, edit2) + "\n");
+            Console.WriteLine("Parent String: " + "'" + main3 + "'" + ", " + "String to test: " + "'" + edit3 + "'" + "\n" + "IsOneEditAway: " + OneAway.isOneEditAway(main3, edit3) + "\n");
+            Console.WriteLine("Parent String: " + "'" + main4 + "'" + ", " + "String to test: " + "'" + edit4 + "'" + "\n" + "IsOneEditAway: " + OneAway.isOneEditAway(main4, edit4) + "\n");
 
-
+            Console.WriteLine("-----------------------------------------------------------\n");
 
             //Question:  Given two sorted arrays, find the number of elements in common. The arrays are the same length
             //and each has all distinct elements. 

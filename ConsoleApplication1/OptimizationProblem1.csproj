@@ -46,6 +46,7 @@
     <Compile Include="ElementsInCommon.cs" />
     <Compile Include="FindPermutations.cs" />
     <Compile Include="IsUnique.cs" />
+    <Compile Include="OneAway.cs" />
     <Compile Include="PalindromePermutation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -33,7 +33,7 @@ namespace ConsoleApplication1
             return output;
 
             //Console Output
-            //Brute Force Algorithm: O(N) runtime, O(N) space
+            //Algorithm: O(N) runtime, O(N) space
             // ------------------------------------ -
             // Write a method to replace all spaces in a string with '%20:
 
